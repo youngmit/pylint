@@ -693,7 +693,7 @@ class NumpyDocstring(GoogleDocstring):
     )
 
     re_returns_line = re.compile(r"""
-        \s* (\w+)?(?=\s+:\s+)(?:\s+:\s+)? # optional name
+        \s* (?:\w+\s+:\s+)? # optional name
         ({type})$                         # type declaration
         \s* (.*)                          # optional description
     """.format(
